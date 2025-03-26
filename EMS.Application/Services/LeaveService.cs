@@ -12,9 +12,9 @@ namespace EMS_Backend_Project.EMS.Application.Services
             _leaveRepository = leaveRepository;
         }
 
-        public Task AddLeaveAsync(int id, LeaveDTO leave)
+        public Task AddLeaveAsync(int loggedUserId, LeaveDTO leave)
         {
-            return _leaveRepository.AddLeaveQuery(id, leave);
+            return _leaveRepository.AddLeaveQuery(loggedUserId, leave);
         }
 
         public Task DeleteLeaveAsync(int id)

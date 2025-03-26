@@ -42,7 +42,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
             var leaveRecord = await _context.Leaves.Include(s => s.Employee)
                                                                 .ThenInclude(u => u.User)
                                                                 .ThenInclude(d => d.Employee.Department)
-                                                                .Where(c => c.Employee.UserId == id)
+                                                                .Where(c => c.EmployeeId == id)
                                                                 .Select(s => new GetLeaveDTO
                                                                 {
                                                                     LeaveId = s.LeaveId,
@@ -57,20 +57,32 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
                                                                     AppliedAt = s.AppliedAt
                                                                 }).ToListAsync();
 
-            if (leaveRecord == null)
+            if (leaveRecord == null || leaveRecord.Count == 0)
                 throw new DataNotFoundException<int>(id);
 
             return leaveRecord;
         }
-        public async Task AddLeaveQuery(int employeeId, LeaveDTO leave)
+        public async Task AddLeaveQuery(int loggedUserID, LeaveDTO leave)
         {
 
-            var employee = await _context.Employees.FirstOrDefaultAsync(s => s.UserId == employeeId || s.UserId == leave.EmployeeId);
+            var employee = await _context.Employees
+                .Include(e => e.Leaves) // Ensure Leaves collection is included
+                .FirstOrDefaultAsync(s => s.UserId == loggedUserID || s.EmployeeId == leave.EmployeeId);
+
             int newId = employee?.EmployeeId ?? leave.EmployeeId;
 
             if (employee == null)
             {
-                throw new DataNotFoundException<int>(employeeId);
+                throw new DataNotFoundException<int>(newId);
+            }
+
+            // Check if any existing leave matches the new leave request
+            bool isLeaveAlreadyApplied = employee.Leaves
+                .Any(l => l.StartDate == leave.StartDate && l.EndDate == leave.EndDate);
+
+            if (isLeaveAlreadyApplied)
+            {
+                throw new AlreadyExistsException<string>("Leave already applied.");
             }
 
             var newLeave = new Leave
@@ -81,7 +93,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
                 TotalDays = (leave.EndDate.ToDateTime(TimeOnly.MinValue) - leave.StartDate.ToDateTime(TimeOnly.MinValue)).Days + 1,
                 LeaveType = leave.LeaveType,
                 Reason = leave.Reason,
-                Status = leave.Status,
+                Status = "Pending",
                 AppliedAt = DateTime.UtcNow,
                 UpdatedAt = null
             };

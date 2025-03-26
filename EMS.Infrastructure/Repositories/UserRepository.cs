@@ -162,7 +162,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
             if (checkEmail != null)
                 throw new AlreadyExistsException<string>($"User is Already exist with {adminUserDTO.Email}");
 
-            var existingAdmin = await _context.Users.FindAsync(id);
+            var existingAdmin = await _context.Users.FirstOrDefaultAsync(s => s.UserId == id && s.RoleId == 1);
 
             if (existingAdmin == null)
                 throw new DataNotFoundException<int>(id);

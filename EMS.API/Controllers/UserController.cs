@@ -45,7 +45,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetUserByID")]
         public async Task<ActionResult<UserDTO>> GetById(int id)
         {
             try
@@ -121,7 +121,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
             }
         }
 
-        [HttpPut("Admin/{id}")]
+        [HttpPut("UpdateAdmin")]
         public async Task<ActionResult<string>> UpdateAdmin(int id, AdminUserDTO adminUser)
         {
             if (!ModelState.IsValid)
@@ -150,7 +150,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
             }
         }
 
-        [HttpPut("Employee/{id}")]
+        [HttpPut("UpdateEmployee")]
         public async Task<ActionResult<string>> UpdateEmployee(int id, EmplyeeUserDTO emplyeeUser)
         {
             if (!ModelState.IsValid)

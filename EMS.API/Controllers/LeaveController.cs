@@ -84,8 +84,8 @@ namespace EMS_Backend_Project.EMS.API.Controllers
 
             try
             {
-                var employeeId = GetLoggedInUserId();
-                await _leaveService.AddLeaveAsync(employeeId, leave);
+                var loggedUserID = GetLoggedInUserId();
+                await _leaveService.AddLeaveAsync(loggedUserID, leave);
 
                 return Ok("Leave record created Successfully.");
             }

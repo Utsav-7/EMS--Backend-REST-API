@@ -3,92 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\logs.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:logs.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.api\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.api\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.infrastructure\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.infrastructure\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.infrastructure\\mapping\\usermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.infrastructure\\mapping\\usermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.application\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.application\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.infrastructure\\repositories\\timesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.infrastructure\\repositories\\timesheetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.infrastructure\\repositories\\reportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.infrastructure\\repositories\\reportrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.infrastructure\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.infrastructure\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.application\\services\\timesheetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.application\\services\\timesheetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.api\\controllers\\timesheetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.api\\controllers\\timesheetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.infrastructure\\repositories\\leaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.infrastructure\\repositories\\leaverepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.api\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.api\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.application\\interfaces\\employeedashboard\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.application\\interfaces\\employeedashboard\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.application\\interfaces\\employeedashboard\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.application\\interfaces\\employeedashboard\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.api\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.api\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.application\\interfaces\\departmentmanagement\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.application\\interfaces\\departmentmanagement\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|c:\\users\\utsav\\onedrive\\desktop\\ems_backend-project\\ems.application\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC0E559A-DB24-457C-87C6-E317BD153E84}|EMS_Backend-Project.csproj|solutionrelative:ems.application\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,16 +26,17 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-21T04:19:34.296Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -120,256 +45,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "logs.txt",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\logs.txt",
-              "RelativeDocumentMoniker": "logs.txt",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\logs.txt",
-              "RelativeToolTip": "logs.txt",
-              "ViewState": "AgIAAEwDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-03-26T12:13:24.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TimeSheetService.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Services\\TimeSheetService.cs",
-              "RelativeDocumentMoniker": "EMS.Application\\Services\\TimeSheetService.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Services\\TimeSheetService.cs",
-              "RelativeToolTip": "EMS.Application\\Services\\TimeSheetService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAIAwwBEAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:20:45.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "EMS.API\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "EMS.API\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:49:40.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "EMS.Application\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "EMS.Application\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAhwBoAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:56:59.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\EmployeeRepository.cs",
-              "RelativeDocumentMoniker": "EMS.Infrastructure\\Repositories\\EmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\EmployeeRepository.cs",
-              "RelativeToolTip": "EMS.Infrastructure\\Repositories\\EmployeeRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAhwDIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:59:31.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserMappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Mapping\\UserMappingProfile.cs",
-              "RelativeDocumentMoniker": "EMS.Infrastructure\\Mapping\\UserMappingProfile.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Mapping\\UserMappingProfile.cs",
-              "RelativeToolTip": "EMS.Infrastructure\\Mapping\\UserMappingProfile.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAcwB4AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T10:35:54.599Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "EMS.Infrastructure\\Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "EMS.Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAJsAAAAAAAAAAIAwwKUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:51:35.663Z"
+              "WhenOpened": "2025-03-26T17:56:56.241Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TimeSheetRepository.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\TimeSheetRepository.cs",
-              "RelativeDocumentMoniker": "EMS.Infrastructure\\Repositories\\TimeSheetRepository.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\TimeSheetRepository.cs",
-              "RelativeToolTip": "EMS.Infrastructure\\Repositories\\TimeSheetRepository.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowH0AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T10:16:48.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "EMS.API\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\UserController.cs",
               "RelativeToolTip": "EMS.API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAcwJ8AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAcwKUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T10:51:44.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "EMS.Application\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Services\\UserService.cs",
-              "RelativeToolTip": "EMS.Application\\Services\\UserService.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAIAwwC8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T10:52:03.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TimeSheetController.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\TimeSheetController.cs",
-              "RelativeDocumentMoniker": "EMS.API\\Controllers\\TimeSheetController.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\TimeSheetController.cs",
-              "RelativeToolTip": "EMS.API\\Controllers\\TimeSheetController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAwwFcAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T11:08:42.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ReportRepository.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\ReportRepository.cs",
-              "RelativeDocumentMoniker": "EMS.Infrastructure\\Repositories\\ReportRepository.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\ReportRepository.cs",
-              "RelativeToolTip": "EMS.Infrastructure\\Repositories\\ReportRepository.cs",
-              "ViewState": "AgIAALoAAAAAAAAAAAAIwAMBAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T11:25:56.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DepartmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\DepartmentRepository.cs",
-              "RelativeDocumentMoniker": "EMS.Infrastructure\\Repositories\\DepartmentRepository.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\DepartmentRepository.cs",
-              "RelativeToolTip": "EMS.Infrastructure\\Repositories\\DepartmentRepository.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowFsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:46:21.544Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LeaveRepository.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\LeaveRepository.cs",
-              "RelativeDocumentMoniker": "EMS.Infrastructure\\Repositories\\LeaveRepository.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\LeaveRepository.cs",
-              "RelativeToolTip": "EMS.Infrastructure\\Repositories\\LeaveRepository.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowEsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T10:16:22.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ReportController.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\ReportController.cs",
-              "RelativeDocumentMoniker": "EMS.API\\Controllers\\ReportController.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\ReportController.cs",
-              "RelativeToolTip": "EMS.API\\Controllers\\ReportController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:21:15.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "EMS.Infrastructure\\Repositories\\AuthRepository.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Infrastructure\\Repositories\\AuthRepository.cs",
-              "RelativeToolTip": "EMS.Infrastructure\\Repositories\\AuthRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T09:00:13.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IEmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Interfaces\\EmployeeDashboard\\IEmployeeRepository.cs",
-              "RelativeDocumentMoniker": "EMS.Application\\Interfaces\\EmployeeDashboard\\IEmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Interfaces\\EmployeeDashboard\\IEmployeeRepository.cs",
-              "RelativeToolTip": "EMS.Application\\Interfaces\\EmployeeDashboard\\IEmployeeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:58:25.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IEmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Interfaces\\EmployeeDashboard\\IEmployeeService.cs",
-              "RelativeDocumentMoniker": "EMS.Application\\Interfaces\\EmployeeDashboard\\IEmployeeService.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Interfaces\\EmployeeDashboard\\IEmployeeService.cs",
-              "RelativeToolTip": "EMS.Application\\Interfaces\\EmployeeDashboard\\IEmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:54:43.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Services\\DepartmentService.cs",
-              "RelativeDocumentMoniker": "EMS.Application\\Services\\DepartmentService.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Services\\DepartmentService.cs",
-              "RelativeToolTip": "EMS.Application\\Services\\DepartmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:47:08.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "DepartmentController.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\DepartmentController.cs",
-              "RelativeDocumentMoniker": "EMS.API\\Controllers\\DepartmentController.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.API\\Controllers\\DepartmentController.cs",
-              "RelativeToolTip": "EMS.API\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:43:43.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IDepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Interfaces\\DepartmentManagement\\IDepartmentService.cs",
-              "RelativeDocumentMoniker": "EMS.Application\\Interfaces\\DepartmentManagement\\IDepartmentService.cs",
-              "ToolTip": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS.Application\\Interfaces\\DepartmentManagement\\IDepartmentService.cs",
-              "RelativeToolTip": "EMS.Application\\Interfaces\\DepartmentManagement\\IDepartmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T08:43:10.939Z"
+              "WhenOpened": "2025-03-26T17:56:33.476Z",
+              "EditorCaption": ""
             }
           ]
         },

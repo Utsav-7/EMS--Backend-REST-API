@@ -6,6 +6,7 @@ using EMS_Backend_Project.EMS.Application.Interfaces.EmployeeDashboard;
 using EMS_Backend_Project.EMS.Application.Interfaces.LeaveManagement;
 using EMS_Backend_Project.EMS.Application.Interfaces.TimeSheetManagement;
 using EMS_Backend_Project.EMS.Common.CustomExceptions;
+using EMS_Backend_Project.EMS.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -118,8 +119,8 @@ namespace EMS_Backend_Project.EMS.API.Controllers
 
             try
             {
-                var employeeId = GetLoggedInUserId();
-                await _leaveService.AddLeaveAsync(employeeId, leave);
+                var loggedUserId = GetLoggedInUserId();
+                await _leaveService.AddLeaveAsync(loggedUserId, leave);
 
                 return Ok("Leave record created Successfully.");
             }

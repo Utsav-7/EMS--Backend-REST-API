@@ -16,7 +16,6 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
         {
         }
 
-
         public async Task<ICollection<GetTimeSheetDTO>> GetAllSheetsQuery()
         {
             var sheetList = await _context.TimeSheets.Include(s => s.Employee)
@@ -94,10 +93,11 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
         public async Task AddSheetQuery(int userId, TimeSheetDTO timeSheet)
         {
             // Check Timesheet already exist in db 
-            var existingSheet = _context.TimeSheets.FirstOrDefault(s => s.Employee.UserId == userId && s.WorkDate == timeSheet.WorkDate);
+            var existingSheet = _context.TimeSheets.FirstOrDefault(s => (s.Employee.UserId == userId && s.WorkDate == timeSheet.WorkDate) || 
+                                                                        (s.Employee.UserId == timeSheet.EmployeeId && s.WorkDate == timeSheet.WorkDate));
 
             var employee = await _context.Employees.FirstOrDefaultAsync(s => s.UserId == userId || s.UserId == timeSheet.EmployeeId);
-            var newId = employee?.EmployeeId ?? timeSheet.EmployeeId;
+            var newId = existingSheet?.EmployeeId ?? timeSheet.EmployeeId;
 
             if (existingSheet != null)
                 throw new AlreadyExistsException<string>("Time Sheet already Exists.");
@@ -126,7 +126,8 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
         public async Task UpdateSheetQuery(int id, TimeSheetDTO timeSheet)
         {
             var existingSheet = await _context.TimeSheets.Include(e => e.Employee)
-                                                   .Where(s => s.Employee.UserId == id && s.WorkDate == timeSheet.WorkDate)
+                                                   .Where(s => (s.EmployeeId == id && s.WorkDate == timeSheet.WorkDate) || 
+                                                               (s.Employee.UserId == id && s.WorkDate == timeSheet.WorkDate))
                                                    .FirstOrDefaultAsync();
 
             if (existingSheet == null)

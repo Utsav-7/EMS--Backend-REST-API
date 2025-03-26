@@ -84,8 +84,8 @@ namespace EMS_Backend_Project.EMS.API.Controllers
 
             try
             {
-                var userId = GetLoggedInUserId();
-                await _timeSheetService.AddSheetAsync(userId, timeSheet);
+                var loggedUserId = GetLoggedInUserId();
+                await _timeSheetService.AddSheetAsync(loggedUserId, timeSheet);
 
                 return Ok("Time Sheet Created Successfully.");
             }
