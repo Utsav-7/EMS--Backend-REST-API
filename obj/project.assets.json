@@ -5290,11 +5290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\utsav\\OneDrive\\Desktop\\Bacancy-Training-2025\\EMS_Backend-Project\\EMS_Backend-Project.csproj",
+      "projectUniqueName": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS_Backend-Project.csproj",
       "projectName": "EMS_Backend-Project",
-      "projectPath": "C:\\Users\\utsav\\OneDrive\\Desktop\\Bacancy-Training-2025\\EMS_Backend-Project\\EMS_Backend-Project.csproj",
+      "projectPath": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\EMS_Backend-Project.csproj",
       "packagesPath": "C:\\Users\\utsav\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\utsav\\OneDrive\\Desktop\\Bacancy-Training-2025\\EMS_Backend-Project\\obj\\",
+      "outputPath": "C:\\Users\\utsav\\OneDrive\\Desktop\\EMS_Backend-Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
