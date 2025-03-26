@@ -1,0 +1,6 @@
+@EMS_Backend_Project_HostAddress = http://localhost:5240
+
+GET {{EMS_Backend_Project_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
