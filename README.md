@@ -76,6 +76,7 @@ This is a backend API for an Employee Management System built with .NET Core fol
 | `PUT` | `/api/Timesheet` | Update timesheet entry |
 | `DELETE` | `/api/Timesheet` | Delete timesheet entry |
 | `GET` | `/api/Timesheet/GenerateExcel` | Export timesheets to Excel |
+| `GET` | `/api/Timesheet/GenerateExcelByEmpID` | Export timesheets to Excel By Employee Id|
 
 ---
 
