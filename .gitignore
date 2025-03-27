@@ -1,5 +1,6 @@
-# Ignore Visual Studio-specific files
+# Ignore Visual Studio & JetBrains files
 .vscode/
+.idea/
 *.suo
 *.user
 *.userosscache
@@ -9,17 +10,22 @@
 bin/
 obj/
 out/
+*.exe
+*.dll
+*.pdb
+*.db
 
 # Ignore logs and temporary files
 *.log
 *.tlog
 *.cache
-*.vs/
+/.vs/
 
-# Ignore user secrets and app settings
+# Ignore user secrets and app settings (except template files)
 secrets.json
 appsettings.json
 appsettings.*.json
+!appsettings.template.json
 
 # Ignore package-related files
 *.nupkg
@@ -36,16 +42,12 @@ wwwroot/
 *.sqlite
 *.sqlite3
 
-# Ignore Rider and JetBrains IDE files
-.idea/
-*.sln.iml
-
-# Ignore Docker and Kubernetes files
+# Ignore Docker & Kubernetes files
 .dockerignore
 .kube/
 
-# Ignore Resharper files
-_ReSharper.Caches/
-
 # Ignore generated files
 Generated/
+
+# Ignore ReSharper files
+_ReSharper.Caches/
