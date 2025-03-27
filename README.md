@@ -9,6 +9,11 @@ This is a backend API for an Employee Management System built with .NET Core fol
 - Leave application system
 - Reporting and analytics
 
+## Technology Stack
+- **Backend:** ASP.NET Core 8.0 Web API (C#)
+- **Database:** SQL Server Management Studio 20.2
+- **Authentication:** JWT (JSON Web Tokens)
+- **External Packages:** EPPlus 7.7.0 (For Excel)
 ---
 
 ## Authentication 🔑
@@ -76,6 +81,7 @@ This is a backend API for an Employee Management System built with .NET Core fol
 | `PUT` | `/api/Timesheet` | Update timesheet entry |
 | `DELETE` | `/api/Timesheet` | Delete timesheet entry |
 | `GET` | `/api/Timesheet/GenerateExcel` | Export timesheets to Excel |
+| `GET` | `/api/Timesheet/GenerateExcelByEmpID` | Export timesheets to Excel By Employee Id|
 
 ---
 
@@ -100,11 +106,11 @@ This is a backend API for an Employee Management System built with .NET Core fol
 ## Setup Instructions 🛠️
 1. Clone the repository:  
    ```sh
-   git clone https://github.com/your-repo-url.git
+   git clone https://github.com/Utsav-7/EMS--Backend-REST-API.git
    ```
 2. Navigate to the project directory:  
    ```sh
-   cd EmployeeManagementSystem
+   cd EMS--Backend-REST-API
    ```
 3. Restore dependencies:  
    ```sh
@@ -123,6 +129,5 @@ This is a backend API for an Employee Management System built with .NET Core fol
    ```
     http://localhost:5240/swagger/index.html
    ```
-
-## License 📜
-This project is licensed under the MIT License.
+### Documentation: 
+https://drive.google.com/file/d/1TmG1Vc7M1OgPRiJJY1gQAAtKaOXg88cP/view?usp=sharing
