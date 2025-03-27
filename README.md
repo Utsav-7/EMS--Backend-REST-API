@@ -9,6 +9,11 @@ This is a backend API for an Employee Management System built with .NET Core fol
 - Leave application system
 - Reporting and analytics
 
+## Technology Stack
+- **Backend:** ASP.NET Core 8.0 Web API (C#)
+- **Database:** SQL Server Management Studio 20.2
+- **Authentication:** JWT (JSON Web Tokens)
+- **External Packages:** EPPlus 7.7.0 (For Excel)
 ---
 
 ## Authentication 🔑
