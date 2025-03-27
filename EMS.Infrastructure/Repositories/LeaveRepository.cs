@@ -42,7 +42,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
             var leaveRecord = await _context.Leaves.Include(s => s.Employee)
                                                                 .ThenInclude(u => u.User)
                                                                 .ThenInclude(d => d.Employee.Department)
-                                                                .Where(c => c.EmployeeId == id)
+                                                                .Where(c => c.Employee.UserId == id)
                                                                 .Select(s => new GetLeaveDTO
                                                                 {
                                                                     LeaveId = s.LeaveId,

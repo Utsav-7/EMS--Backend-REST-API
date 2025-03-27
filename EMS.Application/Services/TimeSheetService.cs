@@ -28,6 +28,11 @@ namespace EMS_Backend_Project.EMS.Application.Services
             return _timeSheetRepository.ExportAllRecordsQuery();
         }
 
+        public Task<FileContentResult> ExportAllRecordsByIdAsync(int empId)
+        {
+            return _timeSheetRepository.ExportAllRecordsByIdQuery(empId);
+        }
+
         public Task<ICollection<GetTimeSheetDTO>> GetAllSheetsAsync()
         {
             return _timeSheetRepository.GetAllSheetsQuery();

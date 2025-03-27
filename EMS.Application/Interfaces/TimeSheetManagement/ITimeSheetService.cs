@@ -12,5 +12,6 @@ namespace EMS_Backend_Project.EMS.Application.Interfaces.TimeSheetManagement
         Task DeleteSheetAsync(int id, DateOnly workDate);
         Task<ICollection<GetEmployeeSheetDTO>> GetSheetByIdAsync(int id);
         Task<FileContentResult> ExportAllRecordsAsync();
+        Task<FileContentResult> ExportAllRecordsByIdAsync(int empId);
     }
 }

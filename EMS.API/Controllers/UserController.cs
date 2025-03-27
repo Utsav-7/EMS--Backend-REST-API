@@ -179,7 +179,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteUser")]
         public async Task<ActionResult<string>> DeleteUser(int id)
         {
             try

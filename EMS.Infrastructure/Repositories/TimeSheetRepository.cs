@@ -183,5 +183,34 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
                 FileDownloadName = "TimeSheet.xlsx"
             };
         }
+
+        public async Task<FileContentResult> ExportAllRecordsByIdQuery(int empId)
+        {
+            var sheetList = await _context.TimeSheets.Include(s => s.Employee)
+                                         .ThenInclude(u => u.User)
+                                         .ThenInclude(d => d.Employee.Department)
+                                         .Where(c => c.EmployeeId == empId)
+                                         .Select(s => new
+                                         {
+                                             TimeSheetId = s.TimeSheetId,
+                                             EmployeeName = s.Employee.User.FirstName + " " + s.Employee.User.LastName,
+                                             DepartmentName = s.Employee.Department.DepartmentName,
+                                             WorkDate = s.WorkDate.ToString("yyyy-MM-dd"),  // Format WorkDate
+                                             StartTime = s.StartTime.ToString(@"hh\:mm"),    // Format StartTime
+                                             EndTime = s.EndTime.ToString(@"hh\:mm"),        // Format EndTime
+                                             BreakTime = s.BreakTime.ToString(@"hh\:mm"),    // Format BreakTime
+                                             WorkHours = s.TotalHours.ToString(@"hh\:mm"),   // Format WorkHours
+                                             Description = s.Description
+                                         }).ToListAsync();
+
+
+            byte[] fileBytes = ExcelExportHelper.ExportToExcel(sheetList);
+
+            return new FileContentResult(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+            {
+                FileDownloadName = "TimeSheet.xlsx"
+            };
+        }
+
     }
 }

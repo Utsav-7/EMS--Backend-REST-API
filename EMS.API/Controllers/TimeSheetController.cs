@@ -180,5 +180,30 @@ namespace EMS_Backend_Project.EMS.API.Controllers
                 return StatusCode(500, new { Message = $"An unexpected error occurred. : {ex.Message}" });
             }
         }
+
+
+        [HttpGet("GenerateExcelByEmpID")]
+        public async Task<ActionResult<TimeSheetDTO>> DownloadExcelById(int employeeId)
+        {
+            try
+            {
+                var sheetList = await _timeSheetService.ExportAllRecordsByIdAsync(employeeId);
+
+                return sheetList;
+            }
+            catch (DataNotFoundException<string> ex)
+            {
+                return NotFound(new { Message = ex.Message });
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(new { Message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = $"An unexpected error occurred. : {ex.Message}" });
+            }
+        }
+
     }
 }

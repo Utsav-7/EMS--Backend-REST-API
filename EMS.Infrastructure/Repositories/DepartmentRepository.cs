@@ -14,14 +14,19 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task<ICollection<GetDepartmentDTO>> GetAllDepartmentQuery()
         {
-            var departmentList = await _context.Employees.Include(e => e.Department)
-                                                           .GroupBy(g => new { g.DepartmentId, g.Department.DepartmentName}) 
-                                                           .Select(s => new GetDepartmentDTO
-                                                           {
-                                                               DepartmentId = s.Key.DepartmentId,
-                                                               DepartmentName = s.Key.DepartmentName,
-                                                               TotalEmployee = s.Count()
-                                                           }).ToListAsync();
+            var departmentList = await _context.Departments
+                                                .GroupJoin(
+                                                    _context.Employees, // Join with Employees
+                                                    d => d.DepartmentId, // Key from Departments
+                                                    e => e.DepartmentId, // Key from Employees
+                                                    (department, employees) => new GetDepartmentDTO
+                                                    {
+                                                        DepartmentId = department.DepartmentId,
+                                                        DepartmentName = department.DepartmentName,
+                                                        TotalEmployee = employees.Count() 
+                                                    }
+                                                ).ToListAsync();
+
 
             if (departmentList == null)
                 throw new DataNotFoundException<string>("Department Records not found.");
@@ -31,16 +36,20 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task<GetDepartmentDTO> GetDepartmentByIdQuery(int id)
         {
-            var department = await _context.Departments.Include(e => e.Employees)
-                .Where(c => c.DepartmentId == id)
-                .GroupBy(g => g.DepartmentName)
-                .Select(s => new GetDepartmentDTO
-                {
-                    DepartmentId = id,
-                    DepartmentName = s.Key,
-                    TotalEmployee = s.Count()
-                }).FirstOrDefaultAsync();
 
+            var department = await _context.Departments
+                                    .Where(c => c.DepartmentId == id)
+                                    .GroupJoin(
+                                        _context.Employees, // Join with Employees
+                                        d => d.DepartmentId, // Key from Departments
+                                        e => e.DepartmentId, // Key from Employees
+                                        (department, employees) => new GetDepartmentDTO
+                                        {
+                                            DepartmentId = department.DepartmentId,
+                                            DepartmentName = department.DepartmentName,
+                                            TotalEmployee = employees.Count()
+                                        }
+                                    ).FirstOrDefaultAsync();
             if (department == null)
                 throw new DataNotFoundException<int>(id);
 

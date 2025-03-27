@@ -229,7 +229,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task DeleteUserByIdQuery(int id)
         {
-            var existingUser = await _context.Users.FindAsync(id);
+            var existingUser = await _context.Users.FirstOrDefaultAsync(c => c.UserId == id && c.IsDeleted == false);
 
             if (existingUser == null)
                 throw new DataNotFoundException<int>(id);
