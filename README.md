@@ -129,4 +129,5 @@ This is a backend API for an Employee Management System built with .NET Core fol
    ```
     http://localhost:5240/swagger/index.html
    ```
-
+### Documentation: 
+https://drive.google.com/file/d/1TmG1Vc7M1OgPRiJJY1gQAAtKaOXg88cP/view?usp=sharing
