@@ -50,7 +50,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
             }
             catch (DataNotFoundException<string> ex)
             {
-                return NotFound(new { Message = ex.Message }); // 404 if email not found
+                return NotFound(new { Message = ex.Message });
             }
             catch (Exception ex)
             {

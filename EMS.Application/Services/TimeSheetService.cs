@@ -18,9 +18,9 @@ namespace EMS_Backend_Project.EMS.Application.Services
             return _timeSheetRepository.AddSheetQuery(loggedUserId, timeSheet);
         }
 
-        public Task DeleteSheetAsync(int id, DateOnly workDate)
+        public Task DeleteSheetAsync(int employeeId, DateOnly workDate)
         {
-            return _timeSheetRepository.DeleteSheetQuery(id, workDate);
+            return _timeSheetRepository.DeleteSheetQuery(employeeId, workDate);
         }
 
         public Task<FileContentResult> ExportAllRecordsAsync()

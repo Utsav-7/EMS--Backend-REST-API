@@ -10,6 +10,6 @@ namespace EMS_Backend_Project.EMS.Application.Interfaces.UserManagement
         Task AddEmployeeAsync(EmplyeeUserDTO emplyeeUser);
         Task UpdateAdminByIdAsync(int id, AdminUserDTO adminUser);
         Task UpdateEmployeeByIdAsync(int id, EmplyeeUserDTO emplyeeUser);
-        Task DeleteUserByIdAsync(int id);
+        Task DeleteUserByIdAsync(int userId);
     }
 }

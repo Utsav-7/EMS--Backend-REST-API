@@ -6,9 +6,7 @@ using EMS_Backend_Project.EMS.Application.Interfaces.EmployeeDashboard;
 using EMS_Backend_Project.EMS.Application.Interfaces.LeaveManagement;
 using EMS_Backend_Project.EMS.Application.Interfaces.TimeSheetManagement;
 using EMS_Backend_Project.EMS.Common.CustomExceptions;
-using EMS_Backend_Project.EMS.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EMS_Backend_Project.EMS.API.Controllers
@@ -68,7 +66,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
             
             try
             {
-                var loggedUser = GetLoggedInUserId();
+                var loggedUser = GetLoggedInUserId(); // get logged User
                 await _employeeService.UpdateProfileAsync(loggedUser, employeeUpdate);
 
                 return Ok("Your Data has been updated.");
@@ -92,7 +90,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
         {
             try
             {
-                var loggedUser = GetLoggedInUserId();
+                var loggedUser = GetLoggedInUserId();  // get logged User
                 var leaveRecord = await _leaveService.GetLeaveByIDAsync(loggedUser);
 
                 return Ok(leaveRecord);
@@ -119,7 +117,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
 
             try
             {
-                var loggedUserId = GetLoggedInUserId();
+                var loggedUserId = GetLoggedInUserId();  // get logged User
                 await _leaveService.AddLeaveAsync(loggedUserId, leave);
 
                 return Ok("Leave record created Successfully.");
@@ -166,7 +164,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
 
             try
             {
-                var employeeId = GetLoggedInUserId();
+                var employeeId = GetLoggedInUserId();   // get logged User
                 await _timeSheetService.AddSheetAsync(employeeId, timeSheet);
 
                 return Ok("Time Sheet Created Successfully.");
@@ -193,7 +191,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
 
             try
             {
-                var loggedUser = GetLoggedInUserId();
+                var loggedUser = GetLoggedInUserId();   // get logged User
                 await _timeSheetService.UpdateSheetAsync(loggedUser, timeSheet);
 
                 return Ok("Time Sheet Updated Successfully.");
@@ -223,7 +221,7 @@ namespace EMS_Backend_Project.EMS.API.Controllers
 
             try
             {
-                var loggedUser = GetLoggedInUserId();
+                var loggedUser = GetLoggedInUserId();   // get logged User
                 await _employeeService.ChangePasswordAsync(loggedUser, employeePwdUpdate);
 
                 return Ok("Your Password will be updated Successfully.");

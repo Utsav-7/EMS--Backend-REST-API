@@ -6,8 +6,8 @@ namespace EMS_Backend_Project.EMS.Application.Interfaces.LeaveManagement
     {
         Task<ICollection<GetLeaveDTO>> GetAllLeavesAsync();
         Task<ICollection<GetLeaveDTO>> GetLeaveByIDAsync(int id);
-        Task AddLeaveAsync(int id, LeaveDTO leave);
-        Task UpdateLeaveAsync(int id, LeaveDTO leave);
-        Task DeleteLeaveAsync(int id);
+        Task AddLeaveAsync(int employeeId, LeaveDTO leave);
+        Task UpdateLeaveAsync(int leaveId, LeaveDTO leave);
+        Task DeleteLeaveAsync(int leaveId);
     }
 }

@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EMS_Backend_Project.EMS.Application.Interfaces;
-using System;
 using EMS_Backend_Project.EMS.Infrastructure.Database;
 
 namespace EMS_Backend_Project.EMS.Infrastructure.Repositories

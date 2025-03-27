@@ -17,9 +17,9 @@ namespace EMS_Backend_Project.EMS.Application.Services
             return _leaveRepository.AddLeaveQuery(loggedUserId, leave);
         }
 
-        public Task DeleteLeaveAsync(int id)
+        public Task DeleteLeaveAsync(int leaveId)
         {
-            return _leaveRepository.DeleteLeaveQuery(id);
+            return _leaveRepository.DeleteLeaveQuery(leaveId);
         }
 
         public async Task<ICollection<GetLeaveDTO>> GetAllLeavesAsync()

@@ -1,12 +1,10 @@
-﻿using System.Numerics;
-using AutoMapper;
+﻿using AutoMapper;
 using EMS_Backend_Project.EMS.Application.DTOs.EmployeeDTOs;
 using EMS_Backend_Project.EMS.Application.DTOs.UserDTOs;
 using EMS_Backend_Project.EMS.Domain.Entities;
 
 namespace EMS_Backend_Project.EMS.Infrastructure.Mapping
 {
-
     public class UserMappingProfile : Profile
     {
         public UserMappingProfile()
@@ -32,7 +30,6 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Mapping
             CreateMap<EmployeeUpdateDTO, Employee>()
                 .ForMember(dest => dest.EmployeeId, opt => opt.Ignore()) // Prevent ID updates
                 .ForMember(dest => dest.User, opt => opt.Ignore()); // Avoid circular mapping issues
-
         }
     }
 }

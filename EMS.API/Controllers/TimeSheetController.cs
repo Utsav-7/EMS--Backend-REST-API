@@ -51,14 +51,14 @@ namespace EMS_Backend_Project.EMS.API.Controllers
         }
 
         [HttpGet("GetSheetByID&Date")]
-        public async Task<ActionResult<GetTimeSheetDTO>> GetByIdDate(int id, DateOnly date)
+        public async Task<ActionResult<GetTimeSheetDTO>> GetByIdDate(int employeeId, DateOnly date)
         {
-            if (id <= 0)
+            if (employeeId <= 0)
                 return BadRequest("Invalid ID. It must be a positive number.");
 
             try
             {
-                var sheet = await _timeSheetService.GetSheetByIdAndDateAsync(id, date);
+                var sheet = await _timeSheetService.GetSheetByIdAndDateAsync(employeeId, date);
 
                 return Ok(sheet);
             }
@@ -133,14 +133,14 @@ namespace EMS_Backend_Project.EMS.API.Controllers
         }
 
         [HttpDelete]
-        public async Task<ActionResult<GetTimeSheetDTO>> Delete(int id, DateOnly date)
+        public async Task<ActionResult<GetTimeSheetDTO>> Delete(int employeeid, DateOnly date)
         {
-            if (id <= 0)
+            if (employeeid <= 0)
                 return BadRequest("Invalid ID. It must be a positive number.");
 
             try
             {
-                await _timeSheetService.DeleteSheetAsync(id, date);
+                await _timeSheetService.DeleteSheetAsync(employeeid, date);
 
                 return Ok("Time Sheet Deleted Successfully.");
             }
@@ -180,7 +180,6 @@ namespace EMS_Backend_Project.EMS.API.Controllers
                 return StatusCode(500, new { Message = $"An unexpected error occurred. : {ex.Message}" });
             }
         }
-
 
         [HttpGet("GenerateExcelByEmpID")]
         public async Task<ActionResult<TimeSheetDTO>> DownloadExcelById(int employeeId)

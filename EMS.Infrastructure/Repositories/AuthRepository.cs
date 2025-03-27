@@ -6,7 +6,6 @@ using EMS_Backend_Project.EMS.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Collections.Concurrent;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
@@ -38,9 +37,11 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
             var passwordHasher = new PasswordHasher<UserLoginDTO>();
             var passwordVerificationResult = passwordHasher.VerifyHashedPassword(userLogin, user.Password, userLogin.Password);
 
+            // password comparison
             if (passwordVerificationResult == PasswordVerificationResult.Failed)
                 throw new Exception("Invalid email or password");
 
+            // generate token by Token Helper
             string token = _tokenService.GenerateToken(userLogin, user.RoleId, user.UserId);
             Console.WriteLine($"Generated Token: {token}");
 
@@ -57,6 +58,8 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
             var encodedToken = _authService.GenerateResetToken();
             Console.WriteLine($"Reset Token: {encodedToken}");
 
+            _resetTokens[encodedToken] = user.Email;
+
             string resetUrl = $"https://yourdomain.com/reset-password?email={Uri.EscapeDataString(user.Email)}&toke{encodedToken}";
 
             // Email body
@@ -65,7 +68,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
                         <p>Click <a href='{resetUrl}'>here</a> to reset your password.</p>
                         <p>If you did not request this, please ignore this email.</p>";
 
-
+            // send reset token in mail
             await _emailService.SendEmailAsync(user.Email, "Reset Password", emailBody);
 
             return "Reset link sent to email.";
@@ -76,17 +79,20 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
             if (resetPwd.NewPassword != resetPwd.ConfirmPassword)
                 throw new Exception("New Password and Confirm Password are not match.");
 
+            // decode the token that sended in mail
             string decodedToken = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(resetPwd.Token));
 
             var user = await _authService.GetUserByEmailAsync(resetPwd.Email);
 
             string expectedToken = Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Substring(0, 20);
 
+            // comparison token 
             if (decodedToken.Length != expectedToken.Length)
                 throw new Exception("Invalid reset token.");
 
             bool status = await _authService.UpdatePasswordDB(resetPwd.ConfirmPassword, user);
 
+            // remove reset token save in dictonary
             _resetTokens.TryRemove(resetPwd.Email, out _);
 
             return status ? "Password has been reset successfully." : "Password has been not reset";

@@ -12,12 +12,11 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 {
     public class TimeSheetRepository : Repository<TimeSheet>, ITimeSheetRepository
     {
-        public TimeSheetRepository(ApplicationDBContext context) : base(context)
-        {
-        }
+        public TimeSheetRepository(ApplicationDBContext context) : base(context) { }
 
         public async Task<ICollection<GetTimeSheetDTO>> GetAllSheetsQuery()
         {
+            // Get all the Sheet that store in DB
             var sheetList = await _context.TimeSheets.Include(s => s.Employee)
                                                      .ThenInclude(u => u.User)
                                                      .ThenInclude(d => d.Employee.Department)
@@ -44,19 +43,22 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task<ICollection<GetEmployeeSheetDTO>> GetSheetByIdQuery(int userId)
         {
-            var getSheetList = await _context.TimeSheets.Include(e => e.Employee).Where(s => s.Employee.UserId == userId).Select(s => new GetEmployeeSheetDTO
-            {
-                TimeSheetId = s.TimeSheetId,
-                EmployeeId = s.EmployeeId,
-                WorkDate = s.WorkDate,
-                StartTime = s.StartTime,
-                EndTime = s.EndTime,
-                BreakTime = s.BreakTime,
-                TotalWorkHours = s.TotalHours,
-                Description = s.Description
-            })
-            .OrderBy(d => d.WorkDate)
-            .ToListAsync();
+            // get timesheet by userId for employee 
+            var getSheetList = await _context.TimeSheets.Include(e => e.Employee)
+                                                        .Where(s => s.Employee.UserId == userId)
+                                                        .Select(s => new GetEmployeeSheetDTO
+                                                        {
+                                                            TimeSheetId = s.TimeSheetId,
+                                                            EmployeeId = s.EmployeeId,
+                                                            WorkDate = s.WorkDate,
+                                                            StartTime = s.StartTime,
+                                                            EndTime = s.EndTime,
+                                                            BreakTime = s.BreakTime,
+                                                            TotalWorkHours = s.TotalHours,
+                                                            Description = s.Description
+                                                        })
+                                                        .OrderBy(d => d.WorkDate)
+                                                        .ToListAsync();
 
             if (getSheetList == null)
                 throw new DataNotFoundException<int>(userId);
@@ -67,6 +69,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
         public async Task<GetTimeSheetDTO> GetSheetByIdAndDateQuery(int employeeId, DateOnly workDate)
 
         {
+            // Get sheet by EmployeeID and Date
             var sheet = await _context.TimeSheets.Include(s => s.Employee)
                                                                  .ThenInclude(u => u.User)
                                                                  .ThenInclude(d => d.Employee.Department)
@@ -93,8 +96,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
         public async Task AddSheetQuery(int userId, TimeSheetDTO timeSheet)
         {
             // Check Timesheet already exist in db 
-            var existingSheet = _context.TimeSheets.FirstOrDefault(s => (s.Employee.UserId == userId && s.WorkDate == timeSheet.WorkDate) || 
-                                                                        (s.Employee.UserId == timeSheet.EmployeeId && s.WorkDate == timeSheet.WorkDate));
+            var existingSheet = _context.TimeSheets.FirstOrDefault(s => (s.Employee.UserId == userId && s.WorkDate == timeSheet.WorkDate) ||  (s.Employee.UserId == timeSheet.EmployeeId && s.WorkDate == timeSheet.WorkDate));
 
             var employee = await _context.Employees.FirstOrDefaultAsync(s => s.UserId == userId || s.UserId == timeSheet.EmployeeId);
             var newId = existingSheet?.EmployeeId ?? timeSheet.EmployeeId;
@@ -125,10 +127,9 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task UpdateSheetQuery(int id, TimeSheetDTO timeSheet)
         {
+            // chech sheet is exist or not
             var existingSheet = await _context.TimeSheets.Include(e => e.Employee)
-                                                   .Where(s => (s.EmployeeId == id && s.WorkDate == timeSheet.WorkDate) || 
-                                                               (s.Employee.UserId == id && s.WorkDate == timeSheet.WorkDate))
-                                                   .FirstOrDefaultAsync();
+                                                         .Where(s => (s.EmployeeId == id && s.WorkDate == timeSheet.WorkDate) ||  (s.Employee.UserId == id && s.WorkDate == timeSheet.WorkDate)).FirstOrDefaultAsync();
 
             if (existingSheet == null)
                 throw new DataNotFoundException<int>(id);
@@ -148,6 +149,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task DeleteSheetQuery(int id, DateOnly date)
         {
+            // find existing sheet
             var existingSheet = await _context.TimeSheets.FirstOrDefaultAsync(s => s.EmployeeId == id && s.WorkDate == date);
 
             if (existingSheet == null)
@@ -159,6 +161,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task<FileContentResult> ExportAllRecordsQuery()
         {
+            // Get sheet list of all sheets
             var sheetList = await _context.TimeSheets.Include(s => s.Employee)
                                          .ThenInclude(u => u.User)
                                          .ThenInclude(d => d.Employee.Department)
@@ -186,6 +189,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task<FileContentResult> ExportAllRecordsByIdQuery(int empId)
         {
+            // get sheet list of specific user by id
             var sheetList = await _context.TimeSheets.Include(s => s.Employee)
                                          .ThenInclude(u => u.User)
                                          .ThenInclude(d => d.Employee.Department)
@@ -211,6 +215,5 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
                 FileDownloadName = "TimeSheet.xlsx"
             };
         }
-
     }
 }

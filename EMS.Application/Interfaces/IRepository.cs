@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-namespace EMS_Backend_Project.EMS.Application.Interfaces
+﻿namespace EMS_Backend_Project.EMS.Application.Interfaces
 {
     public interface IRepository<T> where T : class
     {

@@ -14,7 +14,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Services
             _configuration = configuration;
         }
 
-        // Token generation
+        // Token generation for user login
         internal string GenerateToken(UserLoginDTO login, int roleId, int userId)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));

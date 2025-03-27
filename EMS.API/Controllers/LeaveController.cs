@@ -14,7 +14,6 @@ namespace EMS_Backend_Project.EMS.API.Controllers
     public class LeaveController : ControllerBase
     {
         private readonly ILeaveService _leaveService;
-
         public LeaveController(ILeaveService leaveService)
         {
             _leaveService = leaveService;

@@ -1,5 +1,4 @@
-﻿using EMS_Backend_Project.EMS.Application.DTOs.Authentication;
-using EMS_Backend_Project.EMS.Domain.Entities;
+﻿using EMS_Backend_Project.EMS.Domain.Entities;
 
 namespace EMS_Backend_Project.EMS.Application.Interfaces.Authentication
 {

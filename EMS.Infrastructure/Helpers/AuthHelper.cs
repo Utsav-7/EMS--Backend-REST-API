@@ -22,6 +22,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Services
 
         public async Task<User> GetUserByEmailAsync(string email)
         {
+            // find user by user mail
             var user = await _context.Users.FirstOrDefaultAsync(s => s.Email == email && s.IsDeleted == false);
 
             if (user == null || user.IsDeleted)
@@ -34,6 +35,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Services
         {
             // Generate a reset token (Base64-encoded GUID)
             string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Substring(0, 20);
+
             if (token == null)
                 throw new Exception("Token Not Generated.");
 

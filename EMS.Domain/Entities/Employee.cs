@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using EMS_Backend_Project.EMS.Domain.Common.Validation;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace EMS_Backend_Project.EMS.Domain.Entities
 {

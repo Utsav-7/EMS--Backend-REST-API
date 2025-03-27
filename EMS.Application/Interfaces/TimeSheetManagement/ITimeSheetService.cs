@@ -9,7 +9,7 @@ namespace EMS_Backend_Project.EMS.Application.Interfaces.TimeSheetManagement
         Task<GetTimeSheetDTO> GetSheetByIdAndDateAsync(int employeeId, DateOnly workDate);
         Task AddSheetAsync(int employeeId, TimeSheetDTO timeSheet);
         Task UpdateSheetAsync(int id, TimeSheetDTO timeSheet);
-        Task DeleteSheetAsync(int id, DateOnly workDate);
+        Task DeleteSheetAsync(int employeeid, DateOnly workDate);
         Task<ICollection<GetEmployeeSheetDTO>> GetSheetByIdAsync(int id);
         Task<FileContentResult> ExportAllRecordsAsync();
         Task<FileContentResult> ExportAllRecordsByIdAsync(int empId);

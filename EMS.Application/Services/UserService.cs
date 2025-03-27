@@ -23,9 +23,9 @@ namespace EMS_Backend_Project.EMS.Application.Services
             return _userRepository.AddEmployeeQuery(emplyeeUser);
         }
 
-        public Task DeleteUserByIdAsync(int id)
+        public Task DeleteUserByIdAsync(int userId)
         {
-            return _userRepository.DeleteUserByIdQuery(id);
+            return _userRepository.DeleteUserByIdQuery(userId);
         }
 
         public async Task<ICollection<UserDTO>> GetAllUserAsync()
@@ -33,9 +33,9 @@ namespace EMS_Backend_Project.EMS.Application.Services
             return await _userRepository.GetAllUserQuery();
         }
 
-        public Task<UserDTO> GetUserByIdAsync(int id)
+        public Task<UserDTO> GetUserByIdAsync(int userId)
         {
-            return _userRepository.GetUserByIdQuery(id);
+            return _userRepository.GetUserByIdQuery(userId);
         }
 
         public Task UpdateAdminByIdAsync(int id, AdminUserDTO adminUser)

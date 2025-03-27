@@ -1,5 +1,4 @@
-﻿
-using EMS_Backend_Project.EMS.Application.Interfaces.Authentication;
+﻿using EMS_Backend_Project.EMS.Application.Interfaces.Authentication;
 using EMS_Backend_Project.EMS.Application.Interfaces;
 using EMS_Backend_Project.EMS.Infrastructure.Services;
 using EMS_Backend_Project.EMS.Infrastructure.Repositories;
@@ -34,7 +33,6 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Extensions
             services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddScoped<IReportService, ReportAnalyticsService>();
             services.AddScoped<IEmployeeService, EmployeeService>();
-
             services.AddScoped<IAuthService, AuthHelper>();
             services.AddScoped<IEmailService, EmailHelper>();
             services.AddScoped<JWTTokenHelper>();

@@ -13,6 +13,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Services
             _configuration = configuration;
         }
 
+        // email sending logic
         public async Task SendEmailAsync(string toEmail, string subject, string body)
         {
             try
@@ -38,7 +39,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Services
                 mailMessage.To.Add(toEmail);
 
                 await smtpClient.SendMailAsync(mailMessage);
-                Console.WriteLine($"✅ Email sent successfully to {toEmail}");
+                Console.WriteLine($"Email sent successfully to {toEmail}");
             }
             catch (Exception ex)
             {
@@ -54,7 +55,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Services
                 </div>
             </div>";
 
-
+        // email template for User registration mail
         public async Task SendUserRegistrationEmailAsync(string toEmail, string? password)
         {
             string emailSubject = "Welcome to Our Platform!";

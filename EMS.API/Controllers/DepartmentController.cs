@@ -42,11 +42,11 @@ namespace EMS_Backend_Project.EMS.API.Controllers
         }
 
         [HttpGet("GetById")]
-        public async Task<ActionResult<GetDepartmentDTO>> GetById(int id)
+        public async Task<ActionResult<GetDepartmentDTO>> GetById(int empId)
         {
             try
             {
-                var department = await _departmentService.GetDepartmentByIdAsync(id);
+                var department = await _departmentService.GetDepartmentByIdAsync(empId);
                 return Ok(department);
             }
             catch (DataNotFoundException<int> ex)
@@ -64,11 +64,11 @@ namespace EMS_Backend_Project.EMS.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Add(string name)
+        public async Task<ActionResult> Add(string deptName)
         {
             try
             {
-                await _departmentService.AddDepartmentAsync(name);
+                await _departmentService.AddDepartmentAsync(deptName);
                 return Ok("Department Created Successfully.");
             }
             catch (AlreadyExistsException<string> ex)
@@ -86,11 +86,11 @@ namespace EMS_Backend_Project.EMS.API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Update(int id, string name)
+        public async Task<ActionResult> Update(int deptId, string name)
         {
             try
             {
-                await _departmentService.UpdateDepartmentAsync(id, name);
+                await _departmentService.UpdateDepartmentAsync(deptId, name);
                 return Ok("Department Updated Successfully.");
             }
             catch (DataNotFoundException<int> ex)
@@ -108,11 +108,11 @@ namespace EMS_Backend_Project.EMS.API.Controllers
         }
 
         [HttpDelete]
-        public async Task<ActionResult> Deletee(int id)
+        public async Task<ActionResult> Deletee(int deptId)
         {
             try
             {
-                await _departmentService.DeleteDepartmentAsync(id);
+                await _departmentService.DeleteDepartmentAsync(deptId);
                 return Ok("Department Deleted Successfully.");
             }
             catch (DataNotFoundException<int> ex)

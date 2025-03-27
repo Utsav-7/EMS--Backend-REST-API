@@ -11,9 +11,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 {
     public class ReportRepository : Repository<TimeSheet>, IReportRepository
     {
-        public ReportRepository(ApplicationDBContext context) : base(context)
-        {
-        }
+        public ReportRepository(ApplicationDBContext context) : base(context){ }
 
         public async Task<MonthlyWorkHoursReportDTO> GetMonthlyWorkHoursReportQuery(int employeeId, int month, int year)
         {
@@ -128,6 +126,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task<WeeklyWorkHoursReportDTO> GetWeeklyWorkHoursReportQuery(int employeeId, DateOnly chooseDate)
         {
+            // set Monday-Sunday Week Date based on given date
             DateOnly startOfWeek = chooseDate.AddDays(-(int)chooseDate.DayOfWeek + (int)DayOfWeek.Monday);
             DateOnly endOfWeek = startOfWeek.AddDays(6);
 
@@ -187,6 +186,7 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task<ICollection<WeeklyWorkHoursReportDTO>> GetWeeklyReportOfAllEmployeeQuery(DateOnly chooseDate)
         {
+            // Set Monday-Sunday Week date based on given date
             DateOnly startOfWeek = chooseDate.AddDays(-(int)chooseDate.DayOfWeek + (int)DayOfWeek.Monday);
             DateOnly endOfWeek = startOfWeek.AddDays(6);
 
@@ -258,7 +258,6 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
             if (startDate > endDate)
                 throw new Exception("End Date must be the same as Start Date or greater than.");
-
 
             // Get all employees with related data
             var employees = await _context.Employees

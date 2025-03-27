@@ -1,5 +1,4 @@
-﻿
-namespace EMS_Backend_Project.EMS.Common.CustomExceptions
+﻿namespace EMS_Backend_Project.EMS.Common.CustomExceptions
 {
     [Serializable]
     public class DataNotFoundException<T> : Exception

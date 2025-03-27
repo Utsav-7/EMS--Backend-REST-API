@@ -1,8 +1,6 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using EMS_Backend_Project.EMS.Domain.Common.Validation;
-using Microsoft.EntityFrameworkCore;
 
 namespace EMS_Backend_Project.EMS.Domain.Entities
 {

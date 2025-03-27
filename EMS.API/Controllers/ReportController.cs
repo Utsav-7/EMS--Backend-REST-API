@@ -12,7 +12,6 @@ namespace EMS_Backend_Project.EMS.API.Controllers
     public class ReportController : ControllerBase
     {
         private readonly IReportService _reportService;
-
         public ReportController(IReportService reportService)
         {
             _reportService = reportService;

@@ -5,9 +5,9 @@ namespace EMS_Backend_Project.EMS.Application.Interfaces.DepartmentManagement
     public interface IDepartmentService
     {
         Task<ICollection<GetDepartmentDTO>> GetAllDepartmentAsync();
-        Task<GetDepartmentDTO> GetDepartmentByIdAsync(int id);
-        Task UpdateDepartmentAsync(int id, string name);
+        Task<GetDepartmentDTO> GetDepartmentByIdAsync(int deptId);
+        Task UpdateDepartmentAsync(int deptId, string name);
         Task AddDepartmentAsync(string name);
-        Task DeleteDepartmentAsync(int id);
+        Task DeleteDepartmentAsync(int deptId);
     }
 }

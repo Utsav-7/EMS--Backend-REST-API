@@ -1,5 +1,4 @@
 ﻿using EMS_Backend_Project.EMS.Application.DTOs.TimeSheetDTOs;
-using EMS_Backend_Project.EMS.Domain.Entities;
 
 namespace EMS_Backend_Project.EMS.Application.DTOs.ReportAnalyticsDTOs
 {

@@ -10,7 +10,7 @@ namespace EMS_Backend_Project.EMS.Application.Interfaces.TimeSheetManagement
         Task AddSheetQuery(int employeeId,TimeSheetDTO timeSheet);
         Task UpdateSheetQuery(int id, TimeSheetDTO timeSheet);
         Task DeleteSheetQuery(int id, DateOnly workDate);
-        Task<ICollection<GetEmployeeSheetDTO>> GetSheetByIdQuery(int id);
+        Task<ICollection<GetEmployeeSheetDTO>> GetSheetByIdQuery(int empId);
         Task<FileContentResult> ExportAllRecordsQuery();
         Task<FileContentResult> ExportAllRecordsByIdQuery(int empId);
     }

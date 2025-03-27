@@ -1,7 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using EMS_Backend_Project.EMS.Application.DTOs.UserDTOs;
-using EMS_Backend_Project.EMS.Domain.Common.Validation;
+﻿using System.ComponentModel.DataAnnotations;
 using EMS_Backend_Project.EMS.Domain.Common.Validators;
 
 namespace EMS_Backend_Project.EMS.Application.DTOs.UserDTOs

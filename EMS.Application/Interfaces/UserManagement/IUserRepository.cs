@@ -10,6 +10,6 @@ namespace EMS_Backend_Project.EMS.Application.Interfaces.UserManagement
         Task AddAdminQuery(AdminUserDTO adminUserDTO);
         Task UpdateAdminByIdQuery(int id, AdminUserDTO adminUserDTO);
         Task UpdateEmployeeByIdQuery(int id, EmplyeeUserDTO emplyeeUserDTO);
-        Task DeleteUserByIdQuery(int id);
+        Task DeleteUserByIdQuery(int userId);
     }
 }

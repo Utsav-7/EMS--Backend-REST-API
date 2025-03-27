@@ -17,9 +17,9 @@ namespace EMS_Backend_Project.EMS.Application.Services
             return _departmentRepository.AddDepartmentQuery(name);
         }
 
-        public Task DeleteDepartmentAsync(int id)
+        public Task DeleteDepartmentAsync(int deptId)
         {
-            return _departmentRepository.DeleteDepartmentQuery(id);
+            return _departmentRepository.DeleteDepartmentQuery(deptId);
         }
 
         public async Task<ICollection<GetDepartmentDTO>> GetAllDepartmentAsync()
@@ -27,14 +27,14 @@ namespace EMS_Backend_Project.EMS.Application.Services
             return await _departmentRepository.GetAllDepartmentQuery();
         }
 
-        public async Task<GetDepartmentDTO> GetDepartmentByIdAsync(int id)
+        public async Task<GetDepartmentDTO> GetDepartmentByIdAsync(int deptId)
         {
-            return await _departmentRepository.GetDepartmentByIdQuery(id);
+            return await _departmentRepository.GetDepartmentByIdQuery(deptId);
         }
 
-        public Task UpdateDepartmentAsync(int id, string name)
+        public Task UpdateDepartmentAsync(int deptId, string name)
         {
-            return _departmentRepository.UpdateDepartmentQuery(id, name);
+            return _departmentRepository.UpdateDepartmentQuery(deptId, name);
         }
     }
 }

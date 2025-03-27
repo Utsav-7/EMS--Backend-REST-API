@@ -14,10 +14,8 @@ namespace EMS_Backend_Project.EMS.API.Middlewares
         {
             _next = next;
         }
-
         public async Task Invoke(HttpContext httpContext)
         {
-
             DateTime requestTime = DateTime.Now;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"[{requestTime}] : {httpContext.Request.Method} : {httpContext.Request.Path}");

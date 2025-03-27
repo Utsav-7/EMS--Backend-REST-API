@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using EMS_Backend_Project.EMS.Application.DTOs.EmployeeDTOs;
-using EMS_Backend_Project.EMS.Application.DTOs.UserDTOs;
 using EMS_Backend_Project.EMS.Application.Interfaces.EmployeeDashboard;
 using EMS_Backend_Project.EMS.Common.CustomExceptions;
 using EMS_Backend_Project.EMS.Domain.Entities;
@@ -12,13 +11,14 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 {
     public class EmployeeRepository : Repository<User>, IEmployeeRepository 
     {
-        private readonly IMapper _mapper;
+        private readonly IMapper _mapper;    // mapping data into multiple table
         public EmployeeRepository(ApplicationDBContext context, IMapper mapper) : base(context){
             _mapper = mapper;
         }
 
-        public async Task<GetEmployeeDataDTO> GetProfileDataQuery(int id)
+        public async Task<GetEmployeeDataDTO> GetProfileDataQuery(int id)   
         {
+            // get profile if logged user 
             var employeeData = await _context.Users.Include(s => s.Employee)
                                                         .ThenInclude(d => d.Department)
                                                    .Where(c => c.UserId == id)
@@ -45,8 +45,8 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
         {
             // Include Employee when fetching User
             var existingUser = await _context.Users
-                .Include(u => u.Employee)
-                .FirstOrDefaultAsync(u => u.UserId == id);
+                                             .Include(u => u.Employee)
+                                             .FirstOrDefaultAsync(u => u.UserId == id);
 
             if (existingUser == null)
                 throw new DataNotFoundException<string>($"No Employee found with id {id}");
@@ -73,11 +73,11 @@ namespace EMS_Backend_Project.EMS.Infrastructure.Repositories
 
         public async Task ChangePasswordQuery(int id, EmployeePwdUpdateDTO employeePwdUpdate)
         {
+            // find user is exist or not
             var employee = await _context.Users.FindAsync(id);
 
             if (employee == null)
                 throw new DataNotFoundException<string>($"No Employee found with Id {id}.");
-
 
             // Hash the password
             var passwordHasher = new PasswordHasher<EmployeePwdUpdateDTO>();
