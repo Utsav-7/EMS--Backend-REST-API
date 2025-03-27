@@ -101,11 +101,11 @@ This is a backend API for an Employee Management System built with .NET Core fol
 ## Setup Instructions 🛠️
 1. Clone the repository:  
    ```sh
-   git clone https://github.com/your-repo-url.git
+   git clone https://github.com/Utsav-7/EMS--Backend-REST-API.git
    ```
 2. Navigate to the project directory:  
    ```sh
-   cd EmployeeManagementSystem
+   cd EMS--Backend-REST-API
    ```
 3. Restore dependencies:  
    ```sh
@@ -125,5 +125,3 @@ This is a backend API for an Employee Management System built with .NET Core fol
     http://localhost:5240/swagger/index.html
    ```
 
-## License 📜
-This project is licensed under the MIT License.
